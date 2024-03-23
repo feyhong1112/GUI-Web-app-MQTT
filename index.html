@@ -1,0 +1,659 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&family=Text+Me+One" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+#output {
+  position: relative;
+        white-space: pre-wrap;
+        font-size: 15px;
+       margin-top: -2px;
+    margin-bottom: 0px;
+    padding: 7px;
+    max-width: 190px;
+    display: inline-block;
+ 
+    max-height: 50px;
+    min-height: 50px;
+    min-width: 190px;
+    overflow: hidden;
+      left: 70px;
+      color: green;
+      font-family: "Text Me One", sans-serif;
+      z-index: 9999;
+      border : 1px solid ;
+      white-space: pre;
+      display: inline-block;
+  
+    }
+    @media (min-width: 500px) {
+      #output {
+        min-width: 190px;
+        padding: 0 1px;
+      }
+    }
+ 
+
+    #buttonContainer {
+      margin-top: 20px;
+     
+    }
+
+    #removeDrop {
+      position: absolute;
+      Top: 120px ;
+      right: 0px;
+      transform: translate(-0%, -10%);
+      width: 40px;
+      height: 200px;
+      border: 4px dashed red;
+      text-align: center;
+      line-height: 50px;
+      padding: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: vertical;
+      writing-mode: vertical-lr;
+      font-size: 20px;
+      font-family: "Text Me One", sans-serif;
+      z-index: 9999;
+
+    }
+
+    #removeDrop:hover span {
+  display: none;
+  
+}
+
+#removeDrop:hover:before {
+  color: white;
+  content: "🗑";
+  font-size: 40px;
+  
+}
+
+#removeDrop:hover {
+  background-color: red;
+}
+    #Top {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+    }
+
+    #Top_add {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      
+    }
+
+
+    .Btn {
+      font-family: "Text Me One", sans-serif;
+      background-color: #fbeee0;
+      border: 2px solid #422800;
+      border-radius: 30px;
+      box-shadow: #422800 4px 4px 0 0;
+      color: #422800;
+      cursor: pointer;
+      font-size: 40px;
+      display: inline-block;
+  margin: 4px 2px;
+      
+      padding: 0 18px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      
+    }
+
+    .Btn:hover {
+      background-color: #fff;
+    }
+
+    .Btn:active {
+      box-shadow: #422800 2px 2px 0 0;
+      transform: translate(2px, 2px);
+    }
+
+    @media (min-width: 768px) {
+      .Btn {
+        min-width: 120px;
+        padding: 0 25px;
+      }
+    }
+
+
+    .Btn2 {
+      font-family: "Text Me One", sans-serif;
+      background-color: #fbeee0;
+      border: 2px solid #422800;
+      border-radius: 20px;
+      box-shadow: #422800 4px 4px 0 0;
+      color: #422800;
+      cursor: pointer;
+      
+      display: inline-block;
+  margin: 4px 2px;
+      
+      padding: 0 18px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      
+    }
+
+    .Btn2:hover {
+      background-color: #fff;
+    }
+
+    .Btn2:active {
+      box-shadow: #422800 2px 2px 0 0;
+      transform: translate(2px, 2px);
+    }
+
+    @media (min-width: 768px) {
+      .Btn2 {
+        min-width: 10px;
+        padding: 0 10px;
+      }
+    }
+
+
+    /* CSS */
+    .button-54 {
+      font-family: "Noto Sans Thai", sans-serif;
+  
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      
+      color: #000;
+      cursor: pointer;
+      border: 3px solid;
+      padding: 0.25em 0.5em;
+      box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      
+      width: 95%;
+      height: 87%;
+
+    }
+
+    .button-54:active {
+      box-shadow: 0px 0px 0px 0px;
+      top: 5px;
+      left: 5px;
+
+    }
+
+    @media (min-width: 768px) {
+      .button-54 {
+        padding: 0.25em 0.75em;
+
+      }
+    }
+    .grid-stack {
+      background-color: #f0f8ff;
+      position: relative;
+      width: auto;
+      height: auto;
+
+    }
+
+    .grid-stack-item {
+      display: flex;
+      width: fit-content;
+    }
+    .grid-stack-item-content {
+      width: fit-content;
+     
+      display: inline-block;
+       text-align: unset;
+    }
+
+
+  </style>
+
+
+
+  <link href="node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet"/>
+  <script src="node_modules/gridstack/dist/es5/gridstack-poly.js"></script>
+  <script src="node_modules/gridstack/dist/es5/gridstack-all.js"></script>
+  <link href="node_modules/gridstack/dist/gridstack-extra.min.css" rel="stylesheet"/>
+ 
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+ 
+
+   
+</head>
+
+<body>
+
+  
+  <section class="inactive" style="text-align: Right;  z-index: 99999;position: absolute;">
+   
+    <button id="buttonO" class="show-modal">Login</button>
+  
+    <span class="overlay"></span>
+
+    <div class="modal-box">
+  <div class="buttons">
+        <button class="close-btn" >╳</button>
+      </div>
+     
+  <!-- Modal content -->
+  <div  style = "text-align: center; ">
+      
+      
+    
+    <div id="contact-form-heading-modal" >
+      <h2 style = "font-weight: bold; font-size: 30px;">Login to MQTT Provider</h2>
+  </div>
+
+
+      <form id="connection-information-form" >
+        <div style = "text-align: right;">  
+        <b style = "font-size: 12px;"></b> 
+       
+        <br>
+        <div style = "text-align: center;"> 
+        <b style = "font-size: 12px;">Hostname or IP Address and Port   </b> 
+        <input id="host" type="text" name="host" placeholder="broker address">
+        <input id="port" type="text" name="port" value="8884"  maxlength="4" >
+      </div>
+      
+          </div>
+          <div style = "text-align: center;">
+          <b style = "font-size: 12px;">Login Credential:</b>
+          <br>
+          </div>
+          <il id="space">‎ ‎ </il>
+          <input id="username" type="text" name="Username" placeholder="Username">
+          <input id="Pin" type="text" name="Pin">
+          <br>
+          <input type="button" onclick="startConnect()" value="Connect">
+      <input type="button" onclick="startDisconnect()" value="Disconnect">
+      </form>
+
+       <br> <br>                
+      <div id="messages"></div>
+  </div>
+
+      <h2>Reminder</h2>
+      <h3>If there are no present of MQTT message. The device is offline</h3>
+
+      
+    </div>
+  </section>
+
+
+  <pre id="output">--Screen--</pre>
+
+  <br>
+  
+  <br>
+  <div class="grid-stack" onpointerover="saveitems(); console.log('Ok')">
+  
+       
+   
+  
+        
+       
+ 
+
+  </div>
+  
+  <div id="removeDrop" class="ui-droppable" onpointerdown ="remove(event);">
+   <span> Remove </span>
+  </div>
+  
+  <div id="Top_add">
+    <button class="Btn" role="button" id="createButton" onclick="Addbutton()">+</button>
+
+  </div>
+   
+  <div style = "position : fixed; bottom: 1%; width: fit-content; height: fit-content;">
+    <button class="Btn2" onclick="Addfrequency()" style = " font-size: 20px;" >Learning Code</button>
+  </div>
+
+
+</body>
+<script>
+    
+  let itemFull;
+  let items = [];
+  var topic;
+  var SetOnmessage;
+  var SetOffmessage;
+  
+  function appendText(text) {
+            var output = document.getElementById("output");
+            output.textContent += text + "\n";
+            // Scroll to the bottom of the output area
+            output.scrollTop = output.scrollHeight;
+            
+        }
+
+
+    function updateUI(name, scale, topic, SetOnmessage, SetOffmessage) {
+     GridStack.init({
+      sizeToContent: true, // default to make them all fit
+    
+    acceptWidgets: true,
+    removable: '#removeDrop'
+  });
+  
+      let  buttonHTML = `
+    <div id= "${items.length}" class="grid-stack-item" >
+      <div class="grid-stack-item-content" >
+        
+        <button id="${name}" style="font-size: ${scale}px;" class = "button-54" 
+          onpointerup="Send('${SetOffmessage}', '${topic}')" 
+          onpointerdown="Send('${SetOnmessage}', '${topic}')">
+          ${name}
+        </button>
+       
+      </div>
+    </div>`;
+    GridStack.init({
+      sizeToContent: true, // default to make them all fit
+      resizable: { handles: 'all'},
+    acceptWidgets: true,
+    removable: '#removeDrop'
+  }).addWidget(buttonHTML);
+  
+  saveitems();
+    
+  }
+
+
+  //saveitems();
+  
+  function remove(ev){
+
+items = items.filter((element, elementIndex) => {
+if (ev.target.id === elementIndex) { return false }
+return true
+saveitems()
+
+    })
+  }
+
+  
+  function saveitems() {
+
+      itemFull =  GridStack.init({
+       
+    acceptWidgets: true,
+    removable: '#removeDrop'
+  }).save(true, true);
+     items = itemFull.children;
+    
+    localStorage.setItem('itemsOk',JSON.stringify(items));
+
+  }
+  
+
+
+  window.onload = function() { 
+
+      if (!localStorage.getItem('itemsOk') ) { return }
+     
+   items = JSON.parse(localStorage.getItem('itemsOk'))
+
+
+   
+
+   GridStack.init({
+    acceptWidgets: true,
+    removable: '#removeDrop'
+  }).load(items)
+  
+    }
+
+ 
+    function Addfrequency() {
+
+var buttonpin;
+var mhz;
+
+while (true) {
+buttonpin = prompt("Enter button topic (in number):");
+if (buttonpin !== null){
+if (buttonpin !== "" && !isNaN(buttonpin)) {
+
+ break; // Exit the loop if a valid number is entered
+}else{}
+}else{return;}
+}
+Send(buttonpin.toString(),'setPIN')
+
+
+while (true) {
+if (mhz !== null){
+mhz = prompt("Enter the frequency (300-433 Mhz)");
+if (mhz !== "" && !isNaN(mhz) && parseFloat(mhz) > 299 && parseFloat(mhz) < 443 ) { // Check for "Cancel"
+break; // Exit the loop if a valid number is entered
+} else{}
+}else {return;}
+} 
+
+Send(mhz.toString(),'setMHZ')
+}
+
+
+    function Addbutton() {
+
+      var text = prompt("Enter the text to display on the button:");
+      while ((text === "")) {
+        text = prompt("Enter the text to display on the button: 'Need to fill any text'");
+      }
+      if (text === null) {
+   
+        return
+      }
+
+      var sizeM = prompt("Enter the size of the button (in pixels):", 30);
+      while ((sizeM === "")) {
+        sizeM = prompt("Enter the size of the button (in pixels):", 30);
+      }
+
+      if (sizeM === null) {
+      
+        return;
+      }
+/*
+      let topic = prompt("Enter topic");
+
+while (topic === "" || !isNaN(topic)) {
+  topic = prompt("Enter topic");
+}
+*/
+while (true) {
+  topic = prompt("Enter topic (numbers only):");
+  if (topic !== null) {
+  // Check for valid input (not empty and only numbers)
+  if ( topic !== "" && !isNaN(topic)) {
+    // Valid number entered, exit the loop
+    break;
+  }else{}
+}else{return;}
+
+}
+
+
+
+
+      SetOnmessage = prompt("Enter message to sent when click", 1);
+      while ((SetOnmessage === "")) {
+        SetOnmessage = prompt("Enter message to sent when click", 1);
+      }
+      if (SetOnmessage === null) {
+        return
+      }
+
+      SetOffmessage = prompt("Enter message to sent when not click", 0);
+      while ((SetOffmessage === "")) {
+        SetOffmessage = prompt("Enter message to sent when notclick", 0);
+      }
+
+      if (SetOffmessage === null) {
+        return
+      }
+
+
+      if (text === null && sizeM === null && topic === null && SetOnmessage === null && SetOffmessage === null) {
+        return
+      }
+      updateUI(text, sizeM, topic, SetOnmessage, SetOffmessage);
+    }
+   
+   
+
+    var Login;
+
+ function intitialload() {
+  if (!localStorage.getItem('login') ) { return }
+  
+  Login = JSON.parse(localStorage.getItem('login'))
+  document.getElementById("host").value = Login.hostId;
+  document.getElementById("port").value = Login.portId;
+  document.getElementById("username").value = Login.userIdchk;
+  document.getElementById("Pin").value = Login.passwordIdchk;
+
+  startConnect();
+ }
+ intitialload();
+
+function startConnect() {
+  clientID = "clientID - "+parseInt(Math.random() * 100);
+
+  host = document.getElementById("host").value;   
+  port = document.getElementById("port").value;  
+  userId  = document.getElementById("username").value;  
+  passwordId = document.getElementById("Pin").value;
+
+  client = new Paho.MQTT.Client(host,Number(port),clientID);
+  Login = {
+    hostId : host,
+    portId : port,
+    userIdchk : userId,
+    passwordIdchk : passwordId
+    
+  }
+
+  document.getElementById("messages").innerHTML='connecting';
+  
+
+  client.onConnectionLost = onConnectionLost;
+  client.onMessageArrived = onMessageArrived;
+  client.onConnected = onConnected;
+
+  client.connect({
+     
+      
+      useSSL: true,
+     userName: userId,
+     password: passwordId,
+     onSuccess: onConnect,
+    
+ 
+  
+  });
+  
+}
+
+function onConnected(recon, url) {
+  console.log(" in onConnected " + reconn);
+}
+
+function onConnect() {
+  document.getElementById("messages").innerHTML = "Connected to server on port " + port;
+
+  document.getElementById("messages").innerHTML = "<span style='color:green;'>Connected</span>";
+
+  console.log("on Connect ");
+  localStorage.setItem('login', JSON.stringify(Login))
+  client.subscribe("Monitor");
+}
+
+function onFailure(message) {
+  console.log("Failed");
+  document.getElementById("status_messages").innerHTML = "Connection Failed- Retrying";
+      setTimeout(MQTTconnect, reconnectTimeout);
+      }
+
+
+function onConnectionLost(responseObject){
+  document.getElementById("messages").innerHTML += "<span> ERROR: Connection is lost.</span><br>";
+messages.scrollTop = messages.scrollHeight;
+
+  if(responseObject !=0){
+      document.getElementById("messages").innerHTML += "<span> ERROR:"+ responseObject.errorMessage +"</span><br>";
+  }
+}
+
+function onMessageArrived(message){
+  console.log("OnMessageArrived: "+message.payloadString);
+
+  document.getElementById("messages").innerHTML += "<span> Topic:"+message.destinationName+"| Message : "+message.payloadString + "</span><br>";
+   appendText(message.payloadString);
+}
+
+function Send(msg,top) {
+      
+      var Message = new Paho.MQTT.Message(msg);
+      Message.destinationName = top;
+      
+      client.send(Message);
+      document.getElementById("messages").innerHTML += "<span> Message to topic " + top + " is sent </span><br>";
+
+    }
+function startDisconnect(){
+  client.disconnect();
+  document.getElementById("messages").innerHTML += "<span> Disconnected. </span><br>";
+  localStorage.removeItem('login')
+}
+
+
+
+    const section = document.querySelector("section"),
+      overlay = document.querySelector(".overlay"),
+      showBtn = document.querySelector(".show-modal"),
+      closeBtn = document.querySelector(".close-btn");
+
+    showBtn.addEventListener("click", () => section.classList.add("active"));
+
+    overlay.addEventListener("click", () =>
+      section.classList.remove("active")
+    );
+
+    closeBtn.addEventListener("click", () =>
+      section.classList.remove("active")
+    );
+
+  
+  </script>
+</html>
