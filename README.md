@@ -35,6 +35,7 @@ Bugs/Obstacles:
 * How to deploy the native app or serverless web app.
 ====================================================================
 Confessing the sins:
+
 I recently heard about Node-RED, but I ignored using it because I realized it needs a Raspberry Pi to host the web. If you come across this project to create the web app and you are still a beginner, I suggest starting with Node-RED. I don't want you to spend time constructing messy code.
 ====================================================================
 Humble apologies:
