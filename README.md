@@ -18,7 +18,7 @@ Getting started:(Edit the Code)
 ==========================================================================
 
 Features:
-   - Login MQTT + SSL/TSL (if you want to disable SSL, you could go to the JavaScript script that mentions "useSSL: true").
+   - Login MQTT + SSL/TSL Websocket (if you want to disable SSL, you could go to the JavaScript script that mentions "useSSL: true").
    - When you log in, it will automatically save the session as long as you are disconnected.
 
 Publish:
@@ -30,6 +30,7 @@ Subscription:
 
 Widget:
   - You can drag and drop the widget on the screen freely without refreshing.
+
 ==========================================================================
 
 Bugs/Obstacles:
