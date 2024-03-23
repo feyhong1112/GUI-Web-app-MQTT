@@ -10,11 +10,11 @@ This project aims to:
 
 - Allow me to use SmartRC-CC1101 with a web app.
 - Solve the problem of the absence of a push button on the iOS app and allow users to connect to TSL/SSL to the MQTT server using Paho MQTT.js (Develop from MQTTwebapp - HighVoltages).
-=======================================================================
-To get started:(Edit the Code)
+==========================================================================
+Getting started:(Edit the Code)
 - Install Node.js + Gridstack.js
 - Enjoy!
-=======================================================================
+==========================================================================
 Features:
    - Login MQTT + SSL/TSL (if you want to disable SSL, you could go to the JavaScript script that mentions "useSSL: true").
    - When you log in, it will automatically save the session as long as you are disconnected.
@@ -28,7 +28,7 @@ Subscription:
 
 Widget:
   - You can drag and drop the widget on the screen freely without refreshing.
-=======================================================================
+==========================================================================
 Bugs/Obstacles:
 * When deleting the widget, there is one empty widget left with an empty ID {I hope someone could help debug! It's in the future}.
 * I don't have time to add more entries like "Graph, switch, and others..." and due to this project's focus on applying RCswitch + ESP32 MQTT.
@@ -37,7 +37,7 @@ Bugs/Obstacles:
 Confessing the sins:
 
 I recently heard about Node-RED, but I ignored using it because I realized it needs a Raspberry Pi to host the web. If you come across this project to create the web app and you are still a beginner, I suggest starting with Node-RED. I don't want you to spend time constructing messy code.
-====================================================================
+==========================================================================
 Humble apologies:
 If there are any troubles in this project, I am a novice here. The JavaScript is challenging to solve problems with, but the app will work fine on a local server.
 
