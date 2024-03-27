@@ -6,7 +6,7 @@ Update UI + SSL MQTT from Previous HTTP MQTTwebapp (Only have push button)
 
 Media:
 <a href="https://orrhouseop.netlify.app/" target="_blank" title="Try this" alt="Try this">Try this</a>
-Youtubr: https://www.youtube.com/watch?v=dEhiBesgojg
+Youtube: https://www.youtube.com/watch?v=dEhiBesgojg
 
 
 ![image](https://github.com/feyhong1112/UI-Web-app-MQTT/assets/162882804/e7971477-acf8-442c-9a2c-ebc7e8c265c5)
