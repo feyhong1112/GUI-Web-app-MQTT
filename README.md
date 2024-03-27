@@ -29,7 +29,7 @@ Subscription:
   - You can see the monitor screen near the login; I subscribe with the word "Monitor".
 
 Widget:
-  - You can drag and drop the widget on the screen freely without refreshing.
+  - You can drag and drop the widget on the screen freely and remember it own position.
 
 ==========================================================================
 
