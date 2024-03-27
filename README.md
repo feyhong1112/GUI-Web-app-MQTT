@@ -48,7 +48,8 @@ However, to compare to Node-Red, You now own your first prototype mqtt HTML app.
 
 =======================================================================
 Image:
-![image](https://github.com/feyhong1112/UI-Web-app-MQTT/assets/162882804/760a2a60-a370-434c-ad22-61692ce6acc1)
+![Uploading image.png…]()
+
 
 
 Humble apologies:
