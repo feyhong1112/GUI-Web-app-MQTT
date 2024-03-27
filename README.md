@@ -1,5 +1,5 @@
-# GUI-Web-app-MQTT
-Update GUI + SSL MQTT from Previous HTTP MQTTwebapp (Only have push button)
+# UI Dashboard-Web-app-MQTT
+Update UI + SSL MQTT from Previous HTTP MQTTwebapp (Only have push button)
 
 <a href="https://www.buymeacoffee.com/T_TIamCrying"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=T_TIamCrying&button_colour=FF5F5F&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
