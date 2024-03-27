@@ -10,12 +10,12 @@ This project aims to:
 
 - Allow me to use SmartRC-CC1101 with a web app.
 - Solve the problem of the absence of a push button on the iOS app and allow users to connect to TSL/SSL to the MQTT server using Paho MQTT.js (Develop from MQTTwebapp - HighVoltages).
-==========================================================================
+=======================================================================
 
 Getting started:(Edit the Code)
 - Install Node.js + Gridstack.js
 - Enjoy!
-==========================================================================
+=======================================================================
 
 Features:
    - Login MQTT + SSL/TSL Websocket (if you want to disable SSL, you could go to the JavaScript script that mentions "useSSL: true").
@@ -31,17 +31,18 @@ Subscription:
 Widget:
   - You can drag and drop the widget on the screen freely and remember it own position.
 
-==========================================================================
+=======================================================================
 
 Bugs/Obstacles:
 * When deleting the widget, there is one empty widget left with an empty ID {I hope someone could help debug! It's in the future}.
-* I don't have time to add more entries like "Graph, switch, and others..." and due to this project's focus on applying RCswitch + ESP32 MQTT.
-* How to deploy the native app or serverless web app.
+* I don't have time to add more entries like "Graph, switch, and others..." and due to this project's focus on applying RCswitch + ESP32 MQTT. Perhaps, in the future if I have more pull request to do or someone join to work with. 
+* How to deploy the native app or serverless web app? Recently, I use the free provider because it easy to deploy to ios web app. I cannot deny that free things can't be last for long I need to find some way solve this. {self experience from Blynk}
 =======================================================================
 
 Fact strike on my face:
 
 I recently heard about Node-RED, but I ignored using it because I realized it needs a Raspberry Pi to host the web. If you come across this project to create the web app and you are still a beginner, I suggest starting with Node-RED. I don't want you to spend time constructing messy code.
+
 ==========================================================================
 
 Humble apologies:
