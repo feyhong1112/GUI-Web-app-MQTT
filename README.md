@@ -10,7 +10,8 @@ This project aims to:
 
 - Allow me to use SmartRC-CC1101 with a web app.
 - Solve the problem of the absence of a push button on the iOS app and allow users to connect to TSL/SSL to the MQTT server using Paho MQTT.js (Develop from MQTTwebapp - HighVoltages).
-  =======================================================================
+  
+=======================================================================
 
 Getting started:(Edit the Code)
 - Install Node.js + Gridstack.js
@@ -43,8 +44,9 @@ Bugs/Obstacles:
 Fact strike on my face:
 
 I recently heard about Node-RED, but I ignored using it because I realized it needs a Raspberry Pi to host the web. If you come across this project to create the web app and you are still a beginner, I suggest starting with Node-RED. I don't want you to spend time constructing messy code.
+However, to compare to Node-Red, You now own your first prototype mqtt HTML app.
 
-==========================================================================
+=======================================================================
 
 Humble apologies:
 If there are any troubles in this project, I am a novice here. The JavaScript is challenging to solve problems with, but the app will work fine on a local server.
